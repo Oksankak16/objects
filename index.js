@@ -36,3 +36,27 @@ beep(){
 let bugattiVeyron=new SuperCAr('Bugatti', 'Veyron', 99000);
 bugattiVeyron.beep();
 let bugattiChiron=Object.create(bugattiVeyron);
+console.log(JSON.stringify(bugattiChiron));
+bugattiChiron.model='Chiron';
+console.log(JSON.stringify(bugattiChiron));
+bugattiChiron.beep();
+let zazSensJson=`{
+"make":"ZAZ",
+"model":"Sens",
+"price": 45000
+}`;
+
+let zazSens=JSON.parse(zazSensJson);
+zazSens.beep=beep;
+zazSens.beep();
+
+
+
+
+
+
+
+
+
+
+
